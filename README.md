@@ -8,7 +8,7 @@
 
 - [github仓库](https://gitgub.com/bigfool-cn/vue-element-admin-express)
 
-- [gitree仓库](https://gitee.com/bigfool-cn/vue-element-admin-express)
+- [gitee仓库](https://gitee.com/bigfool-cn/vue-element-admin-express)
 
 
 ## 前序准备
@@ -49,6 +49,16 @@ npm run start
 ```
 
 接口地址：http://127.0.0.1:3001
+
+## 服务端 -聊天室
+
+需要具备golang运行环境和相关知识。
+```bash
+cd ./server_chat/src/chat
+go build -o "chat.exe"
+chat.exe
+```
+如果不需要聊天室，可以移除Chat.vue相关涉及文件，可达到移除聊天室。
 
 ## 前台
 

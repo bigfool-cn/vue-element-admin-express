@@ -1,6 +1,7 @@
 import { login, logout, getInfo } from '@/api/user'
 import { getToken, setToken, removeToken } from '@/utils/auth'
 import router, { resetRouter } from '@/router'
+import { wsClose } from '@/utils/websocket'
 
 const state = {
   token: getToken(),
@@ -93,7 +94,8 @@ const actions = {
 
         // reset visited views and cached views
         dispatch('tagsView/delAllViews', null, { root: true })
-
+        dispatch('chat/delChatData', null, { root: true })
+        wsClose()
         resolve()
       }).catch(error => {
         reject(error)

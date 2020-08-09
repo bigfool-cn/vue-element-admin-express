@@ -23,6 +23,12 @@
         <el-switch v-model="sidebarLogo" class="drawer-switch" />
       </div>
 
+      <div class="drawer-item">
+        <span>打赏</span>
+        <img :src="payWechat" width="100%">
+        <img :src="payZfb" width="100%">
+      </div>
+
     </div>
   </div>
 </template>
@@ -33,7 +39,10 @@ import ThemePicker from '@/components/ThemePicker'
 export default {
   components: { ThemePicker },
   data() {
-    return {}
+    return {
+      payWechat: require('@/assets/pay_wechat.png'),
+      payZfb: require('@/assets/pay_zfb.png')
+    }
   },
   computed: {
     fixedHeader: {
