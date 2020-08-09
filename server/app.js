@@ -19,7 +19,6 @@ app.use(bodyParser.urlencoded({
 
 app.use(bodyParser.json())
 
-
 app.use(function(err, req, res, next) {
   if (err.name === 'UnauthorizedError') {
     res.status(401).send('token已失效')
