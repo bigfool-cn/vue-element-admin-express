@@ -139,22 +139,22 @@ export default {
   .chat {
     background: #f4f6f9;
     min-width: 500px;
-    height: 500px;
+    height: 80vh;
     border: 1px solid #e6e6e6;
 
     .chat-head {
       text-align: center;
       font-size: 16px;
-      line-height: 50px;
+      line-height: 5vh;
       padding-right: 123px;
-      height: 50px;
+      height: 5vh;
       border-bottom: 1px solid #e6e6e6;
     }
 
     .chat-body {
       display: flex;
       flex-direction: row;
-      height: 450px;
+      height: 75vh;
     }
   }
 
@@ -188,7 +188,7 @@ export default {
 
   .chat-body-tx {
     position: relative;
-    height: 100px;
+    height: 15vh;
     border-top: 1px solid #e6e6e6;
 
     .chat-msg {
@@ -196,7 +196,7 @@ export default {
       padding: 8px;
       width: 100%;
       resize: none;
-      height: 97px;
+      height: 14vh;
       border: none;
       outline: none;
     }
