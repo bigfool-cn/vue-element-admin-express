@@ -158,10 +158,10 @@ func wsHandler(resp http.ResponseWriter,req *http.Request)  {
 	wsConnAll[maxConnId] = wsConn
 
 	go us.userJoin(name,wsConn)
-	
+
 	// 读取消息
 	go wsConn.wsReadLoop()
-	
+
 	// 发送消息
 	go wsConn.wsWriteLoop()
 }
@@ -203,6 +203,9 @@ func (u *user) userLeave(name string, wsConn *wsConnection)  {
 	unUseNames.PushFront(wsConn.name)
 	usedNames.Remove(wsConn.nameEl)
 	connIpAll[wsConn.ip] -= 1
+	if connIpAll[wsConn.ip] == 0 {
+	  delete(connIpAll,wsConn.ip)
+	}
 	names := make([]string,2)
 	for i := usedNames.Front(); i != nil; i = i.Next() {
 		names = append(names,i.Value.(string))
