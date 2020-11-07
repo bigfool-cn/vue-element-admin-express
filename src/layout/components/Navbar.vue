@@ -54,7 +54,10 @@
             <el-dropdown-item>博客</el-dropdown-item>
           </a>
           <a target="_blank" href="https://github.com/bigfool-cn/vue-element-admin-express">
-            <el-dropdown-item>node版</el-dropdown-item>
+            <el-dropdown-item>Node版</el-dropdown-item>
+          </a>
+          <a target="_blank" href="https://github.com/bigfool-cn/go-element-admin">
+            <el-dropdown-item>Golang版</el-dropdown-item>
           </a>
           <a target="_blank" href="https://github.com/bigfool-cn/vue-element-admin-simple">
             <el-dropdown-item>PHP版</el-dropdown-item>

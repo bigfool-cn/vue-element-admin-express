@@ -1,18 +1,17 @@
 <template>
   <div class="dashboard-container">
     <el-row :gutter="8">
-      <chat />
+      <el-col :span="6"><el-link type="primary" href="https://gitgub.com/bigfool-cn/vue-element-admin-express">Node版github仓库</el-link></el-col>
+      <el-col :span="6"><el-link type="primary" href="https://gitee.com/bigfool-cn/vue-element-admin-expres">Node版gitee仓库</el-link></el-col>
+      <el-col :span="6"><el-link type="success" href="https://gitgub.com/bigfool-cn/go-element-admin">Golang版github仓库</el-link></el-col>
+      <el-col :span="6"><el-link type="success" href="https://gitee.com/bigfool-cn/go-element-admin">Golang版gitee仓库</el-link></el-col>
     </el-row>
   </div>
 </template>
 
 <script>
-import Chat from './components/Chat'
 export default {
   name: 'Dashboard',
-  components: {
-    Chat
-  },
   data() {
     return {
     }
