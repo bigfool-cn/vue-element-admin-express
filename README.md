@@ -1,10 +1,10 @@
 ## 简介
 
-[vue-element-admin-express](https://vue.usenav.com) 是一个后台前端解决方案，它基于 [vue](https://github.com/vuejs/vue) 和 [element-ui](https://github.com/ElemeFE/element)以及[express](https://www.expressjs.com.cn/)实现。它使用了最新的前端技术栈，内置了动态路由，权限验证，并提供了简单的后端API服务，开箱即用，帮助你快速构建前后端分离动态路由和权限模型。
+[vue-element-admin-express](https://vue.bigfool.cn) 是一个后台前端解决方案，它基于 [vue](https://github.com/vuejs/vue) 和 [element-ui](https://github.com/ElemeFE/element)以及[express](https://www.expressjs.com.cn/)实现。它使用了最新的前端技术栈，内置了动态路由，权限验证，并提供了简单的后端API服务，开箱即用，帮助你快速构建前后端分离动态路由和权限模型。
 
 本项目通过[vue-element-admin](https://github.com/PanJiaChen/vue-element-admin)精简改造，移除了大部分组件，如需要其他组件，可前往搬运。
 
-- [在线预览](https://vue.usenav.com)
+- [在线预览](https://vue.bigfool.cn)
 
 - [github仓库](https://gitgub.com/bigfool-cn/vue-element-admin-express)
 
