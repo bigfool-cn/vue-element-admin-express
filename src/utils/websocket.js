@@ -1,6 +1,6 @@
 import { getToken } from '@/utils/auth'
 import { Message } from 'element-ui'
-const WSS_URL = `wss://vue.usenav.com/chat?token=`
+const WSS_URL = `wss://vue.bigfool.cn/chat?token=`
 let Socket = ''
 
 /** 建立连接 */
