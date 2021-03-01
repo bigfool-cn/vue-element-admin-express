@@ -1,4 +1,5 @@
 const express = require('express')
+const path = require('path')
 const app = express()
 const expressJwt = require('express-jwt')
 const bodyParser = require('body-parser')
@@ -7,10 +8,14 @@ const roleRouter = require('./router/role')
 const menuRouter = require('./router/menu')
 const logRouter = require('./router/user-log')
 
+var history = require('connect-history-api-fallback')
+app.use(express.static(path.join(__dirname, 'dist')))
+app.use(history())
+
 app.use(expressJwt({
   secret: 'bigfool.cn' // 签名的密钥 或 PublicKey
 }).unless({
-  path: ['/user/login'] // 指定路径不经过 Token 解析
+  path: ['/', '/user/login'] // 指定路径不经过 Token 解析
 }))
 
 app.use(bodyParser.urlencoded({
@@ -34,8 +39,8 @@ app.use('/role', roleRouter)
 app.use('/menu', menuRouter)
 
 // 配置服务端口
-const port = 3001
-const hostname = '127.0.0.1'
+const port = 8082
+const hostname = '0.0.0.0'
 app.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`)
 })
