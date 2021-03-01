@@ -8,7 +8,7 @@ const roleRouter = require('./router/role')
 const menuRouter = require('./router/menu')
 const logRouter = require('./router/user-log')
 
-var history = require('connect-history-api-fallback')
+const history = require('connect-history-api-fallback')
 app.use(express.static(path.join(__dirname, 'dist')))
 app.use(history())
 
@@ -39,7 +39,7 @@ app.use('/role', roleRouter)
 app.use('/menu', menuRouter)
 
 // 配置服务端口
-const port = 8082
+const port = 8002
 const hostname = '0.0.0.0'
 app.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`)

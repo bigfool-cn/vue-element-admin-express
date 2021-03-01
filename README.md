@@ -43,12 +43,12 @@ npm install --registry=https://registry.npm.taobao.org
 # vue-element-admin-express/server/mysql.sql 导入数据表到mysql数据库
 # vue-element-admin-express/server/model/init.js 配置数据库信息:数据库名，登录账号，登录密码，ip,端口
 
-# 启动 默认绑定ip：127.0.0.1 端口：3001, 可以在app.js指定你需要的ip和端口
+# 启动 默认绑定ip：0.0.0.0 端口：8002, 可以在app.js指定你需要的ip和端口
 npm run start
 
 ```
 
-接口地址：http://127.0.0.1:3001
+接口地址：http://0.0.0.0:8002
 
 ## 服务端 -聊天室
 
@@ -90,6 +90,20 @@ npm run build:stage
 # 构建生产环境
 npm run build:prod
 ```
+
+## docker构建
+根目录下的Dockerfile将服务端和客户端打包到了一个镜像，客户端打包后的dist目录放到服务端express内作为静态文件目录，
+借用node的http服务就可以启动客户端了，需要修改VUE_APP_BASE_API为"/"。
+```bash
+# 构建镜像
+docker build -t vue-element-admin-express .
+
+# 启动一个项目容器
+docker run -it -p 8002:8002 vue-element-admin-express
+```
+浏览器访问 http://ip:8002就可以访问了
+
+PS: 在线示例跑在改Dockerfile构建的容器中
 
 ## 其它
 

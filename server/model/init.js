@@ -3,10 +3,10 @@ const Sequelize = require('sequelize')
 const sequelize = new Sequelize(
   'vue-element-admin', // 数据库名
   'root', // 用户名
-  '1234568', // 密码
+  '12346578', // 密码
   {
     'dialect': 'mysql', // 数据库类型
-    'host': '139.224.11.85', // ip
+    'host': '127.0.0.1', // ip
     'port': 3306, // 端口
     define: {
       timestamps: false

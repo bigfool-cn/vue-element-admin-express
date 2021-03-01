@@ -20,7 +20,7 @@
   "error_file": "./logs/app-err.log",
   "env": {
     "HOST": "0.0.0.0",
-    "PORT": 8082,
+    "PORT": 8002,
     "NODE_ENV": "production"
   }
 }

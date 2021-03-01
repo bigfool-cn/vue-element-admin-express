@@ -65,6 +65,7 @@ RUN adduser -D -H www \
 
 ENV NODE_ENV=production
 
-EXPOSE 8082
+
+EXPOSE 8002
 
 CMD ["pm2-docker", "pm2.json"]
